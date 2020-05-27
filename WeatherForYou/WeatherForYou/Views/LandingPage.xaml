@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<derived:BasePage xmlns:derived="clr-namespace:WeatherForYou.Views" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeatherForYou.LandingPage"
+                  xmlns:mvvm="clr-namespace:WeatherForYou.ViewModel;assembly=WeatherForYou.ViewModel"
+                  Title="Search your CIty Name">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid BackgroundColor="AliceBlue" Padding="10,10,10,10" Grid.Row="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="7*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text=" Enter City Name" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Padding="5,5,5,5"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="City Name " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="0"
+                Padding="5,5,5,5"/>
+                <Entry
+                    Grid.Column="1"
+                    HorizontalOptions="Start" 
+                    x:Name="CityNameValue" 
+                    Text="{Binding CityNameValue}"
+                    Keyboard="Numeric"
+                    Margin="5,5,5,5"
+                    Placeholder="Tap for Manual"/>
+                <Button 
+                    Grid.Column="2"
+                    Margin="5,5,5,5"
+                    Padding="5,5,5,5"
+                    VerticalOptions="Center"
+                    Text="Search" 
+                    BackgroundColor="DarkBlue"
+                    Command="{Binding searchWeatherCommand}"/>
+            </StackLayout>
+            <ListView
+                Grid.Row="3"
+                Grid.ColumnSpan="3"
+                ItemsSource="{Binding Dates}" 
+                Margin="10,10,10,10"
+                RowHeight="80"
+                ItemSelected="OnDateSeleted"
+                SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label 
+                                    FontSize="20"
+                                    HeightRequest="30"
+                                    Text="Date and Time : " 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" 
+                                    Grid.Column="0"
+                                    Padding="5,5,5,5"/>
+                                <Label 
+                                    FontSize="20"
+                                    HeightRequest="30"
+                                    Text="{Binding Date_Time}" 
+                                    VerticalOptions="Center" 
+                                    HorizontalOptions="Center" 
+                                    Grid.Column="1"
+                                    Padding="5,5,5,5"/>
+                            </Grid>
+                        </ViewCell>
+                        <ViewCell.g
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+            <Grid IsVisible="{Binding IsLoading}">
+                <ActivityIndicator 
+                    AutomationId="ActivityIndicator"
+                    Color="Bisque" 
+                    IsRunning="{Binding IsLoading}"
+                    Margin="0,100,0,0" 
+                    IsVisible="{Binding IsLoading}" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</derived:BasePage>

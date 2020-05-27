@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<derived:BasePage xmlns:derived="clr-namespace:WeatherForYou.Views" 
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="WeatherForYou.Views.Home"
+                  xmlns:mvvm="clr-namespace:WeatherForYou.ViewModel;assembly=WeatherForYou.ViewModel"
+                  Title="Weather details of the City">
+    <ContentPage.Content>
+        <Grid BackgroundColor="LightCoral" Padding="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label 
+                BackgroundColor="LightGray"
+                FontSize="20"
+                HeightRequest="30"
+                Text=" Weather" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Padding="5,5,5,5"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding WeatherMain}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.ColumnSpan="2"
+                Padding="5,5,5,5"
+                    BackgroundColor="White"/>
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding WeatherDescription}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.ColumnSpan="2"
+                Padding="5,5,5,5"
+                    BackgroundColor="White"/>
+            </StackLayout>
+            <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text=" Temperature Forecast" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Padding="5,5,5,5"
+                BackgroundColor="LightGray"/>
+            <StackLayout Orientation="Vertical" Grid.Row="3">
+                <StackLayout Orientation="Horizontal" >
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Temperature : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="0"
+                Padding="5,5,5,5"/>
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding MainTemperature}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="1"
+                        BackgroundColor="White"
+                Padding="5,5,5,5"/>
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Min Temperature : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="2"
+                Padding="5,5,5,5"/>
+                    <Label 
+                        BackgroundColor="White"
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding MainTemperatureMin}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="3"
+                Padding="5,5,5,5"/>
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Max Temperature : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.ColumnSpan="4"
+                Padding="5,5,5,5"/>
+                    <Label 
+                        BackgroundColor="White"
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding MainTemperatureMax}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.ColumnSpan="5"
+                Padding="5,5,5,5"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Pressure : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="0"
+                Padding="5,5,5,5"/>
+                    <Label 
+                        BackgroundColor="White"
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding Pressure}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="1"
+                Padding="5,5,5,5"/>
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="SeaLavel : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="2"
+                Padding="5,5,5,5"/>
+                    <Label 
+                        BackgroundColor="White"
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding SeaLavel}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="3"
+                Padding="5,5,5,5"/>
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="GroundLevel : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="4"
+                Padding="5,5,5,5"/>
+                    <Label 
+                        BackgroundColor="White"
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding GroundLevel}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Column="5"
+                Padding="5,5,5,5"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" >
+                    <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Humidity" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="0"
+                Padding="5,5,5,5"/>
+                    <Label 
+                        BackgroundColor="White"
+                FontSize="20"
+                HeightRequest="30"
+                Text="{Binding Humidity}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="1"
+                Padding="5,5,5,5"/>
+                </StackLayout>
+            </StackLayout>
+            <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text=" Cloud" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Row="4"
+                Grid.ColumnSpan="3"
+                Padding="5,5,5,5"
+                BackgroundColor="LightGray"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="5">
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="All over cloud : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.ColumnSpan="2"
+                Padding="5,5,5,5"/>
+                <Label 
+                FontSize="20"
+                    BackgroundColor="White"
+                HeightRequest="30"
+                Text="{Binding CloudAll}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="2"
+                Padding="5,5,5,5"/>
+            </StackLayout>
+            <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text=" Wind" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Grid.Row="6"
+                Grid.ColumnSpan="3"
+                Padding="5,5,5,5"
+                BackgroundColor="LightGray"/>
+            <StackLayout Orientation="Horizontal" Grid.Row="7">
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Speed : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.ColumnSpan="2"
+                Padding="5,5,5,5"/>
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                    BackgroundColor="White"
+                Text="{Binding WindSpeed}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="2"
+                Padding="5,5,5,5"/>
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                Text="Degree : " 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.ColumnSpan="2"
+                Padding="5,5,5,5"/>
+                <Label 
+                FontSize="20"
+                HeightRequest="30"
+                    BackgroundColor="White"
+                Text="{Binding WindDegree}" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"                
+                Grid.Column="5"
+                Padding="5,5,5,5"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</derived:BasePage>

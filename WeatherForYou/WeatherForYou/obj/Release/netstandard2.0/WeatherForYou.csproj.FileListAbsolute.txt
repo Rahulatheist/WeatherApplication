@@ -1,0 +1,16 @@
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\bin\Release\netstandard2.0\WeatherForYou.deps.json
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\bin\Release\netstandard2.0\WeatherForYou.dll
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\bin\Release\netstandard2.0\ref\WeatherForYou.dll
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\bin\Release\netstandard2.0\WeatherForYou.pdb
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\Views\LandingPage.xaml.g.cs
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\WeatherForYou.csproj.CoreCompileInputs.cache
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\WeatherForYou.AssemblyInfoInputs.cache
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\WeatherForYou.AssemblyInfo.cs
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\WeatherForYou.dll
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\ref\WeatherForYou.dll
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\WeatherForYou.pdb
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\WeatherForYou.csprojAssemblyReference.cache
+C:\Users\mv835e\source\repos\WeatherForYou\WeatherForYou\WeatherForYou\obj\Release\netstandard2.0\Views\Home.xaml.g.cs
